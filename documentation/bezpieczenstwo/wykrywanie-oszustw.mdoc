@@ -1,0 +1,48 @@
+---
+title: "Wykrywanie Oszustw"
+shortTitle: "Wykrywanie Oszustw"
+description: "Jakie mechanizmy Vouchie stosuje do wykrywania i zapobiegania nadużyciom voucherów."
+publishedAt: "2025-04-19"
+order: 3
+status: "published"
+---
+
+## Znaczenie Wykrywania Oszustw
+
+Oszustwa związane z voucherami (fraud) mogą prowadzić do strat finansowych i obniżenia efektywności kampanii. Vouchie może zawierać mechanizmy pomagające w identyfikacji i zapobieganiu podejrzanym aktywnościom.
+
+## Metody Wykrywania Nadużyć
+
+System może wykorzystywać różne techniki do monitorowania potencjalnych oszustw:
+
+*   **Monitorowanie Szybkich, Wielokrotnych Realizacji:**
+    *   System może analizować czas pomiędzy kolejnymi realizacjami tego samego vouchera (jeśli jest wielokrotnego użytku) lub realizacjami różnych voucherów z tego samego źródła (np. adres IP, konto użytkownika).
+    *   Zbyt szybkie, powtarzające się realizacje mogą wskazywać na automatyczne skrypty lub próby nadużycia.
+*   **Analiza Adresów IP:**
+    *   Śledzenie adresów IP, z których dokonywane są realizacje.
+    *   Wykrywanie dużej liczby realizacji różnych voucherów z tego samego adresu IP w krótkim czasie.
+    *   Identyfikacja adresów IP znanych z podejrzanej aktywności (np. serwery proxy, Tor) - *jeśli zintegrowane z zewnętrznymi bazami danych*.
+*   **Limity Realizacji na Klienta/Użytkownika:**
+    *   Oprócz ogólnego limitu użyć vouchera, system może pozwalać na ustawienie limitu realizacji *na jednego klienta* (np. jeden klient może użyć kodu `LATO20` tylko raz, mimo że sam kod jest ważny 100 razy).
+*   **Weryfikacja Klienta:**
+    *   Dla voucherów przypisanych do konkretnych klientów, system powinien weryfikować, czy realizacja jest dokonywana przez uprawnioną osobę (np. poprzez wymóg zalogowania się w sklepie online).
+
+## Alerty i Powiadomienia
+
+Gdy system wykryje potencjalnie podejrzaną aktywność, może podjąć następujące działania:
+
+*   **Wysłać Alert do Administratora:** Powiadomienie email lub w panelu Vouchie informujące o wykryciu podejrzanego wzorca (np. "Wykryto 10 realizacji vouchera XYZ z adresu IP 1.2.3.4 w ciągu 5 minut").
+*   **Oznaczyć Realizację jako Podejrzaną:** Dodanie specjalnej flagi lub statusu do wpisu w [Logach Wykorzystania](/dokumentacja/logi-wykorzystania/przegladanie) w celu łatwiejszej identyfikacji i weryfikacji.
+*   **Automatyczna Blokada (Opcjonalnie, Rzadziej):** W bardziej zaawansowanych konfiguracjach system mógłby tymczasowo zablokować możliwość dalszych realizacji z podejrzanego źródła (np. adresu IP) do czasu weryfikacji przez administratora.
+
+`[placeholder: screenshot - przykład alertu o podejrzanej aktywności]`
+
+## Rola Administratora
+
+Ważne jest, aby administratorzy regularnie:
+
+*   Monitorowali [Logi Wykorzystania](/dokumentacja/logi-wykorzystania/przegladanie) pod kątem nietypowych wzorców.
+*   Reagowali na alerty o podejrzeniu oszustwa.
+*   W razie potwierdzenia nadużycia, ręcznie [dezaktywowali](/dokumentacja/bezpieczenstwo/dezaktywacja-voucherow) powiązane vouchery.
+
+Funkcje wykrywania oszustw w Vouchie stanowią dodatkową warstwę ochrony, pomagającą minimalizować ryzyko i chronić rentowność Twoich kampanii voucherowych.

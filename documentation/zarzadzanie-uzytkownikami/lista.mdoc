@@ -1,0 +1,48 @@
+---
+title: "Lista Użytkowników Systemu"
+shortTitle: "Lista"
+description: "Jak przeglądać listę użytkowników Vouchie, wyszukiwać i filtrować dane."
+publishedAt: "2025-04-19"
+order: 4
+status: "published"
+---
+
+## Przegląd Listy Użytkowników
+
+Lista użytkowników systemu to centralne miejsce do zarządzania wszystkimi kontami, które mają uprawnienia do logowania się i pracy w panelu administracyjnym Vouchie.
+
+`[placeholder: screenshot - ogólny widok listy użytkowników systemu]`
+
+**Typowe kolumny na liście:**
+
+*   **Nazwa Użytkownika / Imię i Nazwisko:** Identyfikator osoby.
+*   **Email:** Adres email używany do logowania.
+*   **Rola:** Przypisana [rola](/dokumentacja/zarzadzanie-uzytkownikami/role-uprawnienia) (np. Administrator, Menedżer).
+*   **Status:** Aktualny stan konta:
+    *   `Aktywny`: Użytkownik może się logować.
+    *   `Nieaktywny` / `Zablokowany`: Logowanie niemożliwe.
+    *   `Oczekujący na akceptację` / `Zaproszony`: Użytkownik otrzymał zaproszenie, ale jeszcze nie aktywował konta.
+*   **Data Ostatniego Logowania:** Kiedy użytkownik ostatnio korzystał z systemu (pomocne w monitorowaniu aktywności).
+*   **Data Dodania:** Kiedy konto zostało utworzone.
+*   **Akcje:** Przyciski/menu do:
+    *   [Edycji](/dokumentacja/zarzadzanie-uzytkownikami/dodawanie-edycja-usuwanie) danych użytkownika (zmiana roli, reset hasła).
+    *   [Dezaktywacji/Aktywacji](/dokumentacja/zarzadzanie-uzytkownikami/dodawanie-edycja-usuwanie) konta.
+    *   [Usunięcia](/dokumentacja/zarzadzanie-uzytkownikami/dodawanie-edycja-usuwanie) konta.
+    *   `Wyślij ponownie zaproszenie` (dla statusu oczekującego).
+
+## Wyszukiwanie i Filtrowanie Użytkowników
+
+Przy większej liczbie użytkowników przydatne stają się narzędzia wyszukiwania i filtrowania:
+
+*   **Wyszukiwanie:** Wpisz fragment nazwy lub adresu email użytkownika w pasku wyszukiwania, aby szybko go znaleźć.
+*   **Filtrowanie:**
+    *   `Według Roli`: Pokaż tylko Administratorów, Menedżerów itp.
+    *   `Według Statusu`: Wyświetl tylko Aktywnych, Nieaktywnych lub Oczekujących użytkowników.
+
+`[placeholder: screenshot - opcje filtrowania listy użytkowników (np. wg roli)]`
+
+## Monitorowanie Aktywności
+
+Kolumna `Data Ostatniego Logowania` pozwala zorientować się, którzy użytkownicy aktywnie korzystają z systemu, a którzy mogą mieć nieaktywne konta, które warto np. zdezaktywować ze względów bezpieczeństwa.
+
+Regularny przegląd listy użytkowników i zarządzanie ich statusami oraz rolami jest ważnym elementem utrzymania bezpieczeństwa i porządku w systemie Vouchie.

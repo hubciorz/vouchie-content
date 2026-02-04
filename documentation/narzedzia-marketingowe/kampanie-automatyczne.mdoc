@@ -1,0 +1,64 @@
+---
+title: "Kampanie Automatyczne"
+shortTitle: "Kampanie Automatyczne"
+description: "Jak tworzyć kampanie, które automatycznie wysyłają vouchery na podstawie wyzwalaczy."
+publishedAt: "2025-04-19"
+order: 2
+status: "published"
+---
+
+## Czym Są Kampanie Automatyczne?
+
+Kampanie automatyczne (nazywane też automatyzacjami lub workflows) pozwalają na zdefiniowanie reguł typu "Jeśli [zdarzenie], to [akcja]". W kontekście Vouchie, akcją jest zazwyczaj wygenerowanie i/lub wysłanie vouchera do klienta, gdy spełnione zostaną określone warunki (wyzwalacze).
+
+**Przykłady zastosowań:**
+
+*   **Voucher Urodzinowy:** Wyślij klientowi specjalny voucher na kilka dni przed jego urodzinami.
+*   **Voucher Powitalny:** Wyślij voucher nowemu klientowi po rejestracji lub pierwszym zakupie.
+*   **Reaktywacja Nieaktywnych Klientów:** Wyślij voucher klientom, którzy nie dokonali zakupu od dłuższego czasu.
+*   **Nagroda za Osiągnięcie Progu Wydatków:** Wyślij voucher klientowi, który przekroczył określoną kwotę wydatków.
+*   **Podziękowanie po Zakupie:** Wyślij mały voucher z podziękowaniem po zrealizowaniu zamówienia.
+
+## Tworzenie Kampanii Automatycznej
+
+1.  **Nawigacja:** Przejdź do sekcji `Marketing -> Automatyzacje`, `Kampanie` lub podobnej.
+2.  **Inicjacja:** Kliknij `+ Stwórz Automatyzację`, `Nowa Kampania Automatyczna`.
+3.  **Konfiguracja Wyzwalacza (Trigger):** Wybierz zdarzenie, które ma uruchomić automatyzację:
+    *   `Urodziny Klienta` (wymaga zapisania daty urodzenia w danych klienta)
+    *   `Nowy Klient Zarejestrowany`
+    *   `Pierwszy Zakup Klienta`
+    *   `Klient Nieaktywny przez X dni`
+    *   `Osiągnięcie Progu Wydatków`
+    *   `Data` (np. uruchom akcję dla wszystkich klientów w danym dniu)
+    *   `Dodanie Taga Klienta`
+
+    `[placeholder: screenshot - wybór wyzwalacza automatyzacji]`
+
+4.  **Konfiguracja Warunków (Conditions - opcjonalnie):** Dodaj dodatkowe warunki, które muszą być spełnione, aby akcja została wykonana (np. "Urodziny Klienta" **ALE TYLKO** dla klientów z tagiem "VIP").
+
+    `[placeholder: screenshot - dodawanie warunków do automatyzacji]`
+
+5.  **Konfiguracja Akcji (Action):** Zdefiniuj, co ma się wydarzyć:
+    *   `Wygeneruj i Przypisz Voucher`: Skonfiguruj parametry vouchera (typ, wartość, ważność) lub wybierz istniejący [szablon](/dokumentacja/zarzadzanie-szablonami/tworzenie).
+    *   `Wyślij Email z Voucherem`: Wybierz [szablon email](/dokumentacja/ustawienia/branding), który zostanie wysłany do klienta wraz z wygenerowanym voucherem.
+    *   `Dodaj Tag Klientowi`
+    *   Inne dostępne akcje...
+
+    `[placeholder: screenshot - konfiguracja akcji: generowanie vouchera i wysyłka email]`
+
+6.  **Nazwa Automatyzacji:** Nadaj kampanii nazwę (np. "Automatyzacja Urodzinowa").
+7.  **Aktywacja:** Włącz automatyzację, aby zaczęła działać.
+
+## Zarządzanie Automatyzacjami
+
+W sekcji automatyzacji możesz:
+
+*   **Przeglądać listę** aktywnych i nieaktywnych kampanii.
+*   **Sprawdzać statystyki** dla każdej automatyzacji (ile razy została uruchomiona, ile voucherów wygenerowano/wysłano).
+*   **Edytować** konfigurację istniejących automatyzacji.
+*   **Dezaktywować/Aktywować** kampanie.
+*   **Usuwać** niepotrzebne automatyzacje.
+
+`[placeholder: screenshot - lista kampanii automatycznych ze statystykami]`
+
+Kampanie automatyczne to potężny sposób na budowanie zaangażowania i lojalności klientów poprzez dostarczanie im spersonalizowanych ofert we właściwym czasie, przy minimalnym wysiłku z Twojej strony.

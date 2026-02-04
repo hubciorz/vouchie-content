@@ -1,0 +1,70 @@
+---
+title: "Ustawienia Integracji (API i Webhooki)"
+shortTitle: "Integracje (API, Webhooki)"
+description: "Zarządzaj kluczami API i konfiguruj webhooki do integracji z zewnętrznymi systemami."
+publishedAt: "2025-04-19"
+order: 3
+status: "published"
+---
+
+## Przegląd Integracji
+
+Vouchie może komunikować się z innymi aplikacjami i systemami (np. Twoim sklepem e-commerce, systemem CRM, narzędziem do automatyzacji marketingu) za pomocą dwóch głównych mechanizmów:
+
+*   **API (Application Programming Interface):** Pozwala innym systemom na **aktywne wysyłanie żądań** do Vouchie (np. "wygeneruj nowy voucher", "sprawdź ważność kodu", "pobierz listę realizacji"). Wymaga to uwierzytelnienia za pomocą Kluczy API.
+*   **Webhooki:** Pozwalają Vouchie na **automatyczne wysyłanie powiadomień** (danych) do innych systemów w momencie, gdy w Vouchie zajdzie określone zdarzenie (np. "voucher został zrealizowany", "nowy voucher został utworzony").
+
+## Zarządzanie Kluczami API
+
+Klucze API są jak hasła dostępowe dla innych aplikacji chcących korzystać z API Vouchie. Muszą być traktowane jako poufne.
+
+**W tej sekcji zazwyczaj możesz:**
+
+1.  **Wygenerować Nowy Klucz API:**
+    *   Kliknij `+ Generuj Klucz API`.
+    *   Nadaj kluczowi nazwę (np. "Integracja ze Sklepem WWW", "Narzędzie Marketingowe X"), aby łatwiej było nim zarządzać.
+    *   System wygeneruje unikalny klucz (długi ciąg znaków).
+    *   **Ważne:** Skopiuj klucz i zapisz go w bezpiecznym miejscu **natychmiast**. Zazwyczaj po zamknięciu tego okna nie będzie można go ponownie zobaczyć w całości ze względów bezpieczeństwa.
+
+    `[placeholder: screenshot - okno generowania nowego klucza API z widocznym kluczem]`
+
+2.  **Przeglądać Istniejące Klucze:** Zobaczysz listę wygenerowanych kluczy (zazwyczaj tylko ich nazwy, daty utworzenia i ewentualnie początkowe/końcowe znaki samego klucza).
+3.  **Unieważnić (Revoke) Klucz API:**
+    *   Jeśli klucz został skompromitowany lub integracja nie jest już potrzebna, możesz go unieważnić.
+    *   Kliknij `Unieważnij`, `Revoke` lub ikonę kosza przy danym kluczu.
+    *   Po unieważnieniu klucz przestanie działać i żadna aplikacja nie będzie mogła się nim uwierzytelnić.
+
+`[placeholder: screenshot - lista kluczy API z opcją unieważnienia]`
+
+## Zarządzanie Webhookami
+
+Webhooki pozwalają na wysyłanie danych o zdarzeniach w Vouchie w czasie rzeczywistym do wskazanych przez Ciebie adresów URL.
+
+**Konfiguracja Webhooka:**
+
+1.  **Dodaj Nowy Webhook:** Kliknij `+ Dodaj Webhook`.
+2.  **Docelowy URL (Endpoint URL):** Wklej adres URL Twojego systemu, który ma odbierać powiadomienia z Vouchie. Ten endpoint musi być przygotowany na odbieranie danych w określonym formacie (zazwyczaj JSON).
+3.  **Wybierz Zdarzenia (Events):** Zaznacz, o jakich zdarzeniach Vouchie ma informować ten konkretny webhook. Przykładowe zdarzenia:
+    *   `voucher.created` (Utworzono voucher)
+    *   `voucher.updated` (Zaktualizowano voucher)
+    *   `voucher.deleted` (Usunięto voucher)
+    *   `voucher.redeemed` (Zrealizowano voucher)
+    *   `client.created` (Dodano klienta)
+    *   Inne...
+
+    `[placeholder: screenshot - formularz konfiguracji webhooka z wyborem zdarzeń]`
+
+4.  **Sekret Webhooka (Webhook Secret - opcjonalnie):** System może wygenerować sekret, który będzie używany do podpisywania wysyłanych żądań. Twój system odbierający może zweryfikować ten podpis, aby upewnić się, że powiadomienie rzeczywiście pochodzi z Vouchie.
+5.  **Zapisz Webhook:** Zapisz konfigurację.
+
+**Zarządzanie Istniejącymi Webhookami:**
+
+*   **Lista Webhooków:** Zobaczysz listę skonfigurowanych webhooków z ich URL-ami i aktywnymi zdarzeniami.
+*   **Edycja:** Możliwość zmiany URL-a lub listy zdarzeń.
+*   **Dezaktywacja/Aktywacja:** Tymczasowe włączenie/wyłączenie wysyłania powiadomień przez dany webhook.
+*   **Usuwanie:** Trwałe usunięcie konfiguracji webhooka.
+*   **Logi Dostarczeń (Delivery Logs - opcjonalnie):** Niektóre systemy pokazują historię prób wysłania powiadomień przez webhooki i ich status (np. `Dostarczono`, `Błąd`).
+
+`[placeholder: screenshot - lista skonfigurowanych webhooków]`
+
+**Uwaga:** Szczegółowe informacje o dostępnych endpointach API, formatach danych i zdarzeniach webhooków znajdziesz w oddzielnej [Dokumentacji API](/dokumentacja/api-integracje/dokumentacja-api).

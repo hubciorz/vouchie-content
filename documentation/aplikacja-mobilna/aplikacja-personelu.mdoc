@@ -1,0 +1,50 @@
+---
+title: "Aplikacja Mobilna dla Personelu"
+shortTitle: "Aplikacja dla Personelu"
+description: "Funkcjonalności aplikacji mobilnej Vouchie dla pracowników do walidacji voucherów."
+publishedAt: "2025-04-19"
+order: 3
+status: "published"
+---
+
+## Cel Aplikacji dla Personelu
+
+Aplikacja mobilna Vouchie dla personelu (lub aplikacja POS - Point of Sale) to narzędzie przeznaczone dla pracowników mających bezpośredni kontakt z klientem (np. kasjerów w sklepie stacjonarnym, obsługi w restauracji). Umożliwia ona szybką i bezpieczną weryfikację oraz realizację voucherów przyniesionych przez klientów (w formie cyfrowej na [Aplikacji Klienta](/dokumentacja/aplikacja-mobilna/aplikacja-klienta) lub wydrukowanej).
+
+## Kluczowe Funkcjonalności
+
+*   **Logowanie Personelu:** Pracownik loguje się na swoje konto (powiązane z [użytkownikiem systemu Vouchie](/dokumentacja/zarzadzanie-uzytkownikami/dodawanie-edycja-usuwanie) z odpowiednimi uprawnieniami) lub używa dedykowanego konta dla danego punktu sprzedaży.
+*   **Skanowanie Kodu Vouchera:**
+    *   Aplikacja wykorzystuje aparat urządzenia mobilnego do **skanowania kodów QR lub kodów paskowych** wyświetlanych przez klienta (np. z jego aplikacji mobilnej) lub wydrukowanych na voucherze.
+
+    `[placeholder: screenshot - ekran skanowania kodu QR/paskowego w aplikacji personelu]`
+
+*   **Ręczne Wprowadzanie Kodu:** Możliwość ręcznego wpisania kodu vouchera, jeśli skanowanie jest niemożliwe.
+*   **Walidacja Vouchera:** Po zeskanowaniu lub wprowadzeniu kodu, aplikacja łączy się z systemem Vouchie, aby sprawdzić:
+    *   Czy kod istnieje i jest aktywny.
+    *   Czy nie przekroczono limitu użyć.
+    *   Czy nie minęła data ważności.
+    *   Czy voucher jest przypisany do tego klienta (jeśli dotyczy i jeśli można zidentyfikować klienta).
+    *   Jaką wartość ma voucher (kwotową lub procentową).
+*   **Wyświetlanie Wyniku Walidacji:** Aplikacja jasno informuje pracownika:
+    *   **Sukces:** Wyświetla wartość zniżki do zastosowania i ewentualnie pozostałą wartość/liczbę użyć.
+    *   **Błąd:** Wyświetla przyczynę odrzucenia vouchera (np. "Kod nieważny", "Voucher wygasł", "Przekroczono limit użyć").
+
+    `[placeholder: screenshot - wynik pomyślnej walidacji vouchera w aplikacji personelu]`
+    `[placeholder: screenshot - wynik błędnej walidacji vouchera z komunikatem o błędzie]`
+
+*   **Realizacja Vouchera (Redeem):**
+    *   Po pomyślnej walidacji i zastosowaniu zniżki w systemie kasowym, pracownik klika przycisk `Zrealizuj`, `Oznacz jako użyty` lub podobny.
+    *   Aplikacja wysyła żądanie do Vouchie, aby oznaczyć voucher jako zrealizowany (lub zmniejszyć jego wartość/liczbę użyć).
+    *   Opcjonalnie: Możliwość wprowadzenia ID transakcji z systemu kasowego w celu powiązania realizacji z konkretnym paragonem.
+*   **Historia Realizacji (Opcjonalnie):** Możliwość przeglądania ostatnich realizacji dokonanych przez tego pracownika lub w tym punkcie sprzedaży.
+
+## Korzyści dla Firmy i Personelu
+
+*   **Szybkość Obsługi:** Skanowanie kodów jest znacznie szybsze niż ręczne sprawdzanie.
+*   **Redukcja Błędów:** Eliminuje pomyłki przy ręcznym wpisywaniu kodów lub sprawdzaniu warunków.
+*   **Bezpieczeństwo:** Natychmiastowa weryfikacja ważności vouchera zapobiega nadużyciom.
+*   **Spójność Danych:** Realizacje są od razu rejestrowane w centralnym systemie Vouchie.
+*   **Łatwość Użycia:** Prosty interfejs dla personelu.
+
+Aplikacja mobilna dla personelu jest niezbędnym narzędziem dla firm posiadających fizyczne punkty sprzedaży, które chcą efektywnie i bezpiecznie obsługiwać vouchery Vouchie.

@@ -1,0 +1,52 @@
+---
+title: "Integracja z Email Marketingiem"
+shortTitle: "Integracja Email"
+description: "Jak połączyć Vouchie z systemami email marketingowymi (np. Mailchimp)."
+publishedAt: "2025-04-19"
+order: 4
+status: "published"
+---
+
+## Dlaczego Integrować z Email Marketingiem?
+
+Połączenie Vouchie z Twoją platformą do email marketingu (taką jak Mailchimp, Klaviyo, GetResponse itp.) pozwala na:
+
+*   **Wzbogacanie Kampanii Emailowych:** Łatwe dołączanie unikalnych lub ogólnych kodów voucherowych do Twoich newsletterów, kampanii promocyjnych czy automatyzacji emailowych.
+*   **Segmentację Odbiorców:** Wysyłanie spersonalizowanych ofert voucherowych do określonych segmentów Twojej listy mailingowej.
+*   **Śledzenie Efektywności:** Lepsze monitorowanie, które kampanie emailowe generują najwięcej realizacji voucherów (wymaga odpowiedniego śledzenia).
+*   **Automatyzację:** Wykorzystanie danych z Vouchie do wyzwalania kampanii emailowych (np. wysłanie emaila z voucherem po udanym poleceniu).
+
+## Jak Działa Integracja?
+
+Sposób działania integracji zależy od konkretnej platformy email marketingowej i możliwości oferowanych przez Vouchie. Typowe scenariusze to:
+
+*   **Synchronizacja Danych Klientów:** Dane klientów z Vouchie mogą być synchronizowane z Twoją listą mailingową, wzbogacając profile subskrybentów o informacje dotyczące posiadanych voucherów lub historii zakupów (jeśli Vouchie jest zintegrowane również z e-commerce).
+*   **Wstawianie Kodów Voucherowych w Emailach:**
+    *   **Ogólne Kody:** Możliwość łatwego wstawienia ogólnodostępnego kodu vouchera (np. `NEWSLETTER10`) do treści emaila.
+    *   **Unikalne Kody:** Możliwość dynamicznego generowania i wstawiania unikalnego kodu vouchera dla każdego odbiorcy kampanii emailowej (często realizowane przez specjalne tagi scalające - merge tags - dostarczane przez integrację).
+*   **Wyzwalanie Kampanii na Podstawie Danych Vouchie:** Automatyzacje w platformie email marketingowej mogą być uruchamiane na podstawie danych przesłanych z Vouchie (np. przez webhooki lub synchronizację), np. "Wyślij serię emaili edukacyjnych klientowi, który właśnie otrzymał swój pierwszy voucher".
+
+## Konfiguracja Integracji
+
+1.  **Nawigacja:** Przejdź do sekcji `Integracje` lub `Ustawienia -> Integracje` w Vouchie.
+2.  **Wybór Platformy:** Znajdź i wybierz platformę email marketingową, z którą chcesz się połączyć (np. Mailchimp).
+3.  **Autoryzacja/Połączenie:** Postępuj zgodnie z instrukcjami, aby połączyć swoje konto Vouchie z kontem platformy email marketingowej. Zazwyczaj wymaga to:
+    *   Zalogowania się do platformy email marketingowej i udzielenia zgody Vouchie.
+    *   Lub wklejenia Klucza API z platformy email marketingowej w ustawieniach Vouchie.
+
+    `[placeholder: screenshot - proces autoryzacji integracji z Mailchimp]`
+
+4.  **Konfiguracja Opcji Synchronizacji:** Wybierz, jakie dane mają być synchronizowane (np. które listy mailingowe, jakie pola danych klientów).
+
+    `[placeholder: screenshot - ustawienia synchronizacji danych z Mailchimp]`
+
+5.  **Aktywacja:** Włącz integrację.
+
+## Użycie w Kampaniach Emailowych
+
+Po skonfigurowaniu integracji:
+
+*   **Tagi Scalające (Merge Tags):** Poszukaj w edytorze email Twojej platformy marketingowej specjalnych tagów scalających dostarczonych przez integrację Vouchie (np. `*|VOUCHIE_CODE|*`). Wstawienie takiego tagu w treści emaila spowoduje, że w jego miejsce zostanie wstawiony odpowiedni kod vouchera (unikalny lub ogólny) dla każdego odbiorcy.
+*   **Segmentacja:** Wykorzystaj zsynchronizowane dane z Vouchie (np. tagi klientów, historia zakupów) do tworzenia bardziej precyzyjnych segmentów odbiorców w Twojej platformie email marketingowej.
+
+Integracja z narzędziami do email marketingu pozwala w pełni wykorzystać potencjał voucherów jako elementu szerszej strategii komunikacji z klientami.

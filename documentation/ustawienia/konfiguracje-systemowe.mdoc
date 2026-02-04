@@ -1,0 +1,51 @@
+---
+title: "Konfiguracje Systemowe"
+shortTitle: "Konfiguracje Systemowe"
+description: "Jak dostosować ogólne ustawienia działania systemu Vouchie."
+publishedAt: "2025-04-19"
+order: 2
+status: "published"
+---
+
+## Ustawienia Domyślne Voucherów
+
+Aby przyspieszyć proces [tworzenia voucherów](/dokumentacja/zarzadzanie-voucherami/tworzenie), możesz zdefiniować domyślne wartości dla niektórych parametrów. Będą one automatycznie podpowiadane w formularzu tworzenia nowego vouchera, ale nadal będzie można je zmienić dla konkretnego kodu.
+
+**Typowe ustawienia domyślne:**
+
+*   **Domyślny Okres Ważności:** Np. `30 dni`, `3 miesiące`, `1 rok`. Ustawienie liczby dni/miesięcy/lat, przez które nowo tworzone vouchery będą domyślnie ważne (jeśli nie zostanie podana konkretna data ważności).
+*   **Domyślny Typ Vouchera:** `Kwotowy` lub `Procentowy`.
+*   **Domyślna Liczba Użyć:** `Pojedyncze`, `Wielokrotne` (z domyślną wartością np. 1) lub `Nieograniczone`.
+*   **Domyślna Długość Kodu Automatycznego:** Liczba znaków dla kodów generowanych przez system.
+*   **Domyślny Prefix Kodu:** Stały ciąg znaków dodawany na początku automatycznie generowanych kodów (np. `PROMO-`).
+
+`[placeholder: screenshot - sekcja ustawień domyślnych dla voucherów]`
+
+## Konfiguracja Powiadomień Email
+
+System Vouchie może wysyłać automatyczne powiadomienia email do klientów lub administratorów w odpowiedzi na różne zdarzenia. W tej sekcji możesz zarządzać tymi powiadomieniami.
+
+**Przykładowe ustawienia powiadomień:**
+
+*   **Powiadomienie o Nowym Voucherze dla Klienta:**
+    *   `Włącz/Wyłącz`: Czy wysyłać email do klienta, gdy zostanie mu [przypisany voucher](/dokumentacja/zarzadzanie-klientami/przypisywanie-voucherow).
+    *   `Edytuj Szablon Email`: Dostosuj treść i wygląd wiadomości email (często powiązane z sekcją [Brandingu](/dokumentacja/ustawienia/branding)).
+*   **Powiadomienie o Realizacji Vouchera (dla Admina):**
+    *   `Włącz/Wyłącz`: Czy wysyłać powiadomienie na wskazany adres email administratora za każdym razem, gdy voucher zostanie zrealizowany.
+    *   `Adres Email Admina`: Wprowadź adres odbiorcy powiadomień.
+*   **Powiadomienie o Wygasającym Voucherze (dla Klienta):**
+    *   `Włącz/Wyłącz`: Czy wysyłać przypomnienie do klienta na kilka dni przed wygaśnięciem jego vouchera.
+    *   `Liczba Dni Przed Wygaśnięciem`: Ustaw, na ile dni przed terminem ma być wysłane przypomnienie (np. 3 dni).
+    *   `Edytuj Szablon Email`.
+
+`[placeholder: screenshot - sekcja ustawień powiadomień email]`
+
+## Inne Ustawienia Globalne
+
+W zależności od systemu, mogą tu być dostępne również inne globalne konfiguracje, np.:
+
+*   **Format Daty i Czasu:** Wybór preferowanego formatu wyświetlania dat.
+*   **Domyślna Strefa Czasowa:** Ustawienie strefy czasowej dla operacji systemowych.
+*   **Wymagania Dotyczące Hasła:** Ustawienia złożoności haseł dla [użytkowników systemu](/dokumentacja/zarzadzanie-uzytkownikami/dodawanie-edycja-usuwanie).
+
+Dostosowanie tych ustawień pozwala na lepsze dopasowanie działania Vouchie do Twoich preferencji i procesów biznesowych.

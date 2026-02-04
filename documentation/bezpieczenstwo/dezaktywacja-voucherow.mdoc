@@ -1,0 +1,45 @@
+---
+title: "Dezaktywacja Voucherów"
+shortTitle: "Dezaktywacja Voucherów"
+description: "Jak dezaktywować vouchery, aby zapobiec ich dalszemu wykorzystaniu."
+publishedAt: "2025-04-19"
+order: 2
+status: "published"
+---
+
+## Czym Jest Dezaktywacja?
+
+Dezaktywacja vouchera oznacza zmianę jego statusu na taki, który uniemożliwia jego realizację. Jest to podstawowy mechanizm kontroli i bezpieczeństwa, pozwalający na wycofanie vouchera z obiegu bez konieczności jego trwałego usuwania z systemu.
+
+Dezaktywowany voucher pozostaje widoczny w systemie (np. na [Liście Voucherów](/dokumentacja/zarzadzanie-voucherami/lista-filtrowanie) z odpowiednim statusem, w [Historii Wykorzystania](/dokumentacja/zarzadzanie-voucherami/szczegoly-historia) dla wcześniejszych realizacji), ale nie może być już użyty do uzyskania zniżki.
+
+## Ręczna Dezaktywacja
+
+Możesz ręcznie dezaktywować dowolny aktywny voucher w każdej chwili. Jest to przydatne w sytuacjach, gdy:
+
+*   Podejrzewasz nadużycie lub oszustwo związane z danym kodem.
+*   Chcesz zakończyć promocję przed pierwotnie ustaloną datą ważności.
+*   Voucher został wydany przez pomyłkę, ale już nie można go bezpiecznie usunąć.
+
+**Jak ręcznie dezaktywować:**
+
+1.  Znajdź voucher na [Liście Voucherów](/dokumentacja/zarzadzanie-voucherami/lista-filtrowanie).
+2.  Wybierz opcję `Dezaktywuj` (może to być przycisk, opcja w menu lub przełącznik statusu).
+3.  Potwierdź operację.
+
+`[placeholder: screenshot - przycisk/opcja dezaktywacji na liście voucherów]`
+
+Status vouchera zmieni się na `Nieaktywny` lub podobny.
+
+## Automatyczna Dezaktywacja
+
+System Vouchie automatycznie dezaktywuje vouchery w następujących sytuacjach:
+
+*   **Osiągnięcie Daty Ważności:** Po upłynięciu zdefiniowanej [daty ważności](/dokumentacja/zarzadzanie-voucherami/tworzenie), voucher automatycznie zmienia status na `Wygasły` i nie może być już realizowany.
+*   **Osiągnięcie Limitu Użyć:**
+    *   Dla voucherów z ustawioną [liczbą użyć](/dokumentacja/zarzadzanie-voucherami/tworzenie) (np. `Pojedyncze` lub `Wielokrotne: 10`), po ostatniej dozwolonej realizacji voucher automatycznie zmienia status na `Wykorzystany`.
+    *   Dla voucherów kwotowych z włączoną [częściową realizacją](/dokumentacja/zarzadzanie-voucherami/tworzenie), po wykorzystaniu pełnej wartości vouchera, jego status również zmieni się na `Wykorzystany`.
+
+Te automatyczne mechanizmy zapewniają, że vouchery nie będą używane dłużej lub częściej, niż było to zamierzone, bez potrzeby ręcznej interwencji.
+
+Dezaktywacja (zarówno ręczna, jak i automatyczna) jest fundamentalnym narzędziem kontroli cyklu życia voucherów i zapobiegania stratom wynikającym z ich nieautoryzowanego lub przedłużonego użycia.

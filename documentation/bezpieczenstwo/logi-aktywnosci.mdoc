@@ -1,0 +1,74 @@
+---
+title: "Logi Aktywności Systemu"
+shortTitle: "Logi Aktywności"
+description: "Jak śledzić zmiany i działania wykonywane w systemie Vouchie przez użytkowników."
+publishedAt: "2025-04-19"
+order: 4
+status: "published"
+---
+
+## Czym Są Logi Aktywności?
+
+Logi Aktywności (Audit Logs lub Audit Trail) to chronologiczny zapis **wszystkich istotnych działań i zmian** dokonywanych w systemie Vouchie przez [użytkowników panelu administracyjnego](/dokumentacja/zarzadzanie-uzytkownikami/lista). Różnią się one od [Logów Wykorzystania Voucherów](/dokumentacja/logi-wykorzystania/przegladanie), które śledzą tylko realizacje kodów przez klientów końcowych.
+
+Logi Aktywności są kluczowe dla:
+
+*   **Bezpieczeństwa:** Monitorowanie, kto i kiedy dokonywał zmian w systemie.
+*   **Audytu:** Możliwość prześledzenia historii zmian (np. kto edytował dany voucher, kto zmienił ustawienia).
+*   **Rozwiązywania Problemów:** Identyfikacja przyczyny nieoczekiwanych zmian lub błędów.
+*   **Zgodności (Compliance):** Spełnianie wymogów regulacyjnych dotyczących śledzenia dostępu do danych.
+
+## Dostęp do Logów Aktywności
+
+Logi Aktywności znajdują się zazwyczaj w sekcji dostępnej tylko dla administratorów:
+
+*   `Administracja -> Logi Aktywności`
+*   `Ustawienia -> Audyt`
+*   `Bezpieczeństwo -> Logi Systemu`
+
+`[placeholder: screenshot - widok tabeli logów aktywności systemu]`
+
+## Jakie Informacje Są Logowane?
+
+System Vouchie powinien logować kluczowe zdarzenia, takie jak:
+
+*   **Logowanie / Wylogowanie Użytkownika:** Kto i kiedy zalogował się do panelu.
+*   **Operacje na Voucherach:**
+    *   Utworzenie nowego vouchera (przez kogo).
+    *   Edycja istniejącego vouchera (kto, kiedy, jakie pola zmieniono - *opcjonalnie*).
+    *   Usunięcie/Dezaktywacja vouchera (kto, kiedy).
+*   **Operacje na Szablonach:** Tworzenie, edycja, usuwanie szablonów.
+*   **Operacje na Klientach:** Dodawanie, edycja, usuwanie klientów.
+*   **Operacje na Użytkownikach Systemu:**
+    *   Dodanie/Zaproszenie nowego użytkownika.
+    *   Zmiana roli użytkownika.
+    *   Dezaktywacja/Usunięcie użytkownika.
+    *   Reset hasła.
+*   **Zmiany w Ustawieniach:** Modyfikacja konfiguracji systemowych, ustawień brandingu, integracji, ról i uprawnień.
+*   **Generowanie Raportów / Eksport Danych:** Kto i kiedy pobierał dane.
+
+## Dane w Logach Aktywności
+
+Każdy wpis w logu aktywności zazwyczaj zawiera:
+
+*   **Data i Czas:** Kiedy zdarzenie miało miejsce.
+*   **Użytkownik:** Który użytkownik systemu wykonał akcję (nazwa, email).
+*   **Adres IP (Opcjonalnie):** Adres IP, z którego wykonano akcję.
+*   **Typ Zdarzenia / Akcja:** Co zostało zrobione (np. `voucher_created`, `user_role_changed`, `settings_updated`).
+*   **Szczegóły / Opis:** Dodatkowe informacje o zdarzeniu (np. ID zmienionego vouchera, nazwa zmienionego ustawienia, nowa przypisana rola).
+
+## Przeglądanie i Filtrowanie Logów Aktywności
+
+Podobnie jak inne logi, Logi Aktywności można zazwyczaj:
+
+*   **Przeglądać** w formie chronologicznej listy.
+*   **Filtrować** według:
+    *   Zakresu dat.
+    *   Konkretnego użytkownika.
+    *   Typu zdarzenia/akcji.
+    *   Adresu IP.
+*   **Wyszukiwać** np. po ID obiektu, którego dotyczyła zmiana.
+
+`[placeholder: screenshot - opcje filtrowania logów aktywności]`
+
+Regularne przeglądanie Logów Aktywności (szczególnie przez administratorów) jest dobrą praktyką w zakresie utrzymania bezpieczeństwa i kontroli nad systemem Vouchie.

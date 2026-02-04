@@ -1,0 +1,64 @@
+---
+title: "Przypisywanie Voucherów do Klientów"
+shortTitle: "Przypisywanie Voucherów"
+description: "Jak przypisać konkretne vouchery do wybranych klientów, tworząc spersonalizowane oferty."
+publishedAt: "2025-04-19"
+order: 4
+status: "published"
+---
+
+## Dlaczego Przypisywać Vouchery?
+
+Przypisywanie voucherów bezpośrednio do klientów pozwala na:
+
+*   **Personalizację:** Tworzenie ofert specjalnie dla wybranych osób.
+*   **Kontrolę:** Ograniczenie możliwości wykorzystania vouchera tylko do wskazanej osoby.
+*   **Targetowanie:** Kierowanie promocji do określonych segmentów klientów.
+*   **Programy lojalnościowe:** Nagradzanie stałych klientów unikalnymi kodami.
+
+Vouchery nieprzypisane (ogólnodostępne) mogą być wykorzystane przez każdą osobę posiadającą kod.
+
+## Przypisywanie Indywidualne
+
+Najczęściej voucher przypisuje się podczas jego tworzenia lub edycji.
+
+1.  W formularzu [Tworzenia](/dokumentacja/zarzadzanie-voucherami/tworzenie) lub [Edycji Vouchera](/dokumentacja/zarzadzanie-voucherami/edycja-usuwanie) znajdź pole `Przypisz do Klienta`.
+2.  Zacznij wpisywać imię, nazwisko lub email klienta.
+3.  Wybierz właściwą osobę z wyświetlonej listy.
+
+    `[placeholder: screenshot - pole 'Przypisz do Klienta' w formularzu vouchera]`
+
+4.  Zapisz voucher. Od tej pory będzie on widoczny jako przypisany do tego klienta i tylko on (lub system w jego imieniu) będzie mógł go zrealizować (w zależności od konfiguracji systemu).
+
+Możliwe jest również przypisywanie vouchera z poziomu widoku szczegółów klienta lub listy klientów, jeśli dostępne są odpowiednie akcje (np. przycisk "Przypisz Voucher").
+
+## Przypisywanie Masowe (Grupowe)
+
+Chcesz wysłać specjalną ofertę do całej grupy klientów (np. wszystkich z tagiem "Newsletter" lub tych, którzy dokonali zakupu w ostatnim miesiącu)? Funkcja masowego przypisywania voucherów jest idealna do takich kampanii.
+
+**Typowy przebieg masowego przypisywania:**
+
+1.  **Wybór Klientów:**
+    *   Przejdź do [Listy Klientów](/dokumentacja/zarzadzanie-klientami/lista-filtrowanie).
+    *   Użyj **filtrów**, aby wybrać docelową grupę klientów (np. według tagów, daty dodania, aktywności).
+    *   Zaznacz pole wyboru (`checkbox`) przy wybranych klientach lub użyj opcji "Zaznacz wszystkich" (na widocznej stronie lub wszystkich pasujących do filtrów).
+
+    `[placeholder: screenshot - lista klientów z zaznaczonymi checkboxami i aktywnymi filtrami]`
+
+2.  **Inicjacja Akcji Masowej:** Znajdź przycisk akcji masowych (często pojawia się po zaznaczeniu klientów), np. `Akcje`, `Przypisz Voucher Grupowo`.
+3.  **Wybór Vouchera:**
+    *   Wybierz, czy chcesz przypisać **istniejący, nieprzypisany** voucher (np. ogólnodostępny kod `URODZINY10`), czy **wygenerować nowy, unikalny voucher** dla każdego zaznaczonego klienta (na podstawie szablonu lub zdefiniowanych parametrów).
+    *   Jeśli wybierasz istniejący, wyszukaj i zaznacz odpowiedni kod vouchera.
+    *   Jeśli generujesz nowe, skonfiguruj parametry (typ, wartość, ważność itp.) lub wybierz szablon.
+
+    `[placeholder: screenshot - okno dialogowe masowego przypisywania/generowania voucherów]`
+
+4.  **Potwierdzenie:** Sprawdź podsumowanie (liczba klientów, wybrany/generowany voucher) i potwierdź operację.
+
+System rozpocznie proces przypisywania/generowania voucherów dla wybranej grupy. W zależności od liczby klientów może to potrwać kilka chwil.
+
+**Powiadomienia (Opcjonalne):**
+
+System może automatycznie wysłać powiadomienie email do klientów o przypisaniu im nowego vouchera (jeśli funkcja jest włączona w [Ustawieniach](/dokumentacja/ustawienia/konfiguracje-systemowe)).
+
+Masowe przypisywanie voucherów to potężne narzędzie do automatyzacji kampanii marketingowych i efektywnego angażowania grup klientów.

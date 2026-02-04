@@ -1,0 +1,54 @@
+---
+title: "Tworzenie Szablonu Vouchera"
+shortTitle: "Tworzenie"
+description: "Jak zaprojektować i stworzyć nowy szablon wizualny dla voucherów."
+publishedAt: "2025-04-19"
+order: 2
+status: "published"
+---
+
+## Projektowanie Szablonów za Pomocą Edytora Wizualnego
+
+Edytor szablonów Vouchie pozwala na tworzenie unikalnych projektów voucherów bez znajomości kodu. Wykorzystuje on intuicyjny interfejs, często oparty na metodzie "przeciągnij i upuść" (drag-and-drop).
+
+**Kroki tworzenia szablonu:**
+
+1.  **Nawigacja:** Przejdź do sekcji `Szablony` w panelu administracyjnym.
+2.  **Inicjacja:** Kliknij przycisk `+ Dodaj Szablon` lub podobny.
+3.  **Nazwa Szablonu:** Nadaj szablonowi rozpoznawalną nazwę (np. "Szablon Świąteczny", "Voucher Rabatowy Standard").
+4.  **Edytor Wizualny:** Otworzy się interfejs edytora.
+
+    `[placeholder: screenshot - ogólny widok edytora szablonów]`
+
+    **Elementy Edytora:**
+
+    *   **Płótno (Canvas):** Centralny obszar roboczy, gdzie projektujesz wygląd vouchera.
+    *   **Panel Elementów:** Lista dostępnych komponentów, które możesz dodać do szablonu:
+        *   `Tekst`: Do dodawania tytułów, opisów, warunków promocji.
+        *   `Obraz`: Do wstawiania logo firmy, grafik tematycznych.
+        *   `Kod QR`: Automatycznie generowany kod QR reprezentujący kod vouchera (do skanowania).
+        *   `Kod Paskowy`: Alternatywna forma kodu do skanowania.
+        *   `Kształty/Linie`: Do wizualnego oddzielania sekcji.
+    *   **Panel Dynamicznych Pól:** Specjalne elementy, które automatycznie pobiorą dane konkretnego vouchera podczas jego generowania na podstawie tego szablonu:
+        *   `{{kod_vouchera}}`: Wyświetli unikalny kod.
+        *   `{{wartosc}}`: Pokaże wartość (np. "50 PLN" lub "15%").
+        *   `{{data_waznosci}}`: Wyświetli datę wygaśnięcia.
+        *   `{{imie_klienta}}`: Pokaże imię przypisanego klienta (jeśli dotyczy).
+        *   Inne dostępne pola...
+    *   **Panel Właściwości:** Po zaznaczeniu elementu na płótnie, tutaj pojawią się opcje jego dostosowania (czcionka, kolor, rozmiar, wyrównanie, przezroczystość itp.).
+
+5.  **Projektowanie:**
+    *   Przeciągnij potrzebne elementy z panelu na płótno.
+    *   Rozmieść je i zmień ich rozmiar według uznania.
+    *   Użyj panelu właściwości, aby dostosować wygląd każdego elementu.
+    *   Wstaw dynamiczne pola w odpowiednich miejscach (np. `{{kod_vouchera}}` w polu przeznaczonym na kod).
+
+    `[placeholder: screenshot - przykład projektowania w edytorze, przeciąganie elementu]`
+
+6.  **Ustawienia Domyślne Vouchera (Opcjonalne):**
+    *   W niektórych systemach szablon może zawierać domyślne wartości dla voucherów tworzonych na jego podstawie (np. domyślny typ "Kwotowy", domyślna liczba użyć "Pojedyncze"). Jeśli dostępne, skonfiguruj te opcje. Przyspieszy to późniejsze [tworzenie voucherów](/dokumentacja/zarzadzanie-voucherami/tworzenie).
+
+7.  **Podgląd:** Skorzystaj z opcji podglądu, aby zobaczyć, jak będzie wyglądał finalny voucher wygenerowany na podstawie tego szablonu.
+8.  **Zapisz Szablon:** Kliknij przycisk `Zapisz`.
+
+Utworzony szablon będzie teraz dostępny na [Liście Szablonów](/dokumentacja/zarzadzanie-szablonami/lista) i będzie można go wybrać podczas tworzenia nowych voucherów.

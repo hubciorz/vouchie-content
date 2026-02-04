@@ -1,0 +1,34 @@
+---
+title: "Przeglądanie Logów"
+shortTitle: "Przeglądanie"
+description: "Jak przeglądać szczegółowe logi dotyczące realizacji voucherów."
+publishedAt: "2025-04-19"
+order: 2
+status: "published"
+---
+
+## Dostęp do Logów Wykorzystania
+
+Aby przejrzeć historię realizacji voucherów:
+
+1.  **Nawigacja:** W panelu administracyjnym znajdź sekcję `Logi Wykorzystania`, `Historia Realizacji` lub podobną. Zazwyczaj znajduje się ona w głównym menu lub jako podsekcja `Voucherów` lub `Raportów`.
+2.  **Widok Listy:** Po wejściu do sekcji zobaczysz tabelę (listę) zawierającą chronologiczny zapis wszystkich operacji wykorzystania voucherów.
+
+`[placeholder: screenshot - ogólny widok tabeli logów wykorzystania]`
+
+## Interpretacja Danych w Logach
+
+Każdy wiersz w tabeli logów reprezentuje jedną konkretną realizację vouchera. Zrozumienie poszczególnych kolumn jest kluczowe do analizy danych:
+
+*   **Data i Czas:** Dokładny moment, w którym voucher został zastosowany w transakcji.
+*   **Kod Vouchera:** Kod zrealizowanego vouchera. Kliknięcie może prowadzić do [Szczegółów Vouchera](/dokumentacja/zarzadzanie-voucherami/szczegoly-historia).
+*   **Typ Vouchera:** Kwotowy / Procentowy.
+*   **Klient:** Identyfikator klienta, który dokonał realizacji (np. email, imię). Kliknięcie może prowadzić do [Szczegółów Klienta](/dokumentacja/zarzadzanie-klientami/lista-filtrowanie).
+*   **ID Transakcji / Zamówienia:** Unikalny numer referencyjny z systemu sprzedaży (jeśli zintegrowany), pozwalający powiązać realizację z konkretnym zakupem.
+*   **Wartość Zniżki / Oszczędność:** Faktyczna kwota lub procent zniżki udzielony w tej transakcji.
+*   **Status Realizacji (Opcjonalnie):** Może wskazywać, czy transakcja została zakończona pomyślnie, czy np. później anulowana.
+*   **Źródło / Kanał (Opcjonalnie):** Jeśli system śledzi, skąd pochodziła realizacja (np. `sklep online`, `aplikacja mobilna`, `punkt stacjonarny`).
+
+**Sortowanie:** Podobnie jak w innych listach, możesz zazwyczaj sortować logi, klikając nagłówki kolumn (np. sortowanie po dacie, kodzie vouchera, kliencie).
+
+Regularne przeglądanie logów pozwala na bieżąco monitorować aktywność związaną z voucherami i szybko reagować na ewentualne trendy lub problemy.

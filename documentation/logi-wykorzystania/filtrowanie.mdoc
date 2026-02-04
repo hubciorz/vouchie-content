@@ -1,0 +1,44 @@
+---
+title: "Filtrowanie Logów"
+shortTitle: "Filtrowanie"
+description: "Jak używać filtrów do zawężania widoku logów wykorzystania voucherów."
+publishedAt: "2025-04-19"
+order: 3
+status: "published"
+---
+
+## Znaczenie Filtrowania Logów
+
+Przy dużej liczbie transakcji, przeglądanie pełnej listy logów może być nieefektywne. Filtrowanie pozwala na szybkie znalezienie interesujących Cię danych, np.:
+
+*   Realizacje konkretnego vouchera.
+*   Aktywność voucherowa danego klienta.
+*   Realizacje w określonym przedziale czasowym (np. wczoraj, ostatni tydzień, podczas trwania kampanii).
+*   Realizacje voucherów określonego typu.
+
+## Jak Filtrować Logi?
+
+1.  **Otwórz Opcje Filtrów:** W widoku [Logów Wykorzystania](/dokumentacja/logi-wykorzystania/przegladanie) znajdź przycisk `Filtry` lub dedykowany panel filtrowania.
+
+    `[placeholder: screenshot - przycisk/panel filtrów w widoku logów]`
+
+2.  **Wybierz Kryteria Filtrowania:** Dostępne opcje mogą się różnić w zależności od systemu, ale zazwyczaj obejmują:
+
+    *   **Zakres Dat:**
+        *   Wybierz datę początkową i końcową, aby zobaczyć realizacje tylko z tego okresu.
+        *   Często dostępne są predefiniowane zakresy (np. `Dziś`, `Ostatnie 7 dni`, `Ten miesiąc`).
+    *   **Kod Vouchera:** Wpisz konkretny kod vouchera, aby zobaczyć tylko jego realizacje.
+    *   **Klient:** Wyszukaj i wybierz klienta (po emailu, imieniu), aby zobaczyć tylko jego aktywność.
+    *   **Typ Vouchera:** Wybierz `Kwotowe` lub `Procentowe`.
+    *   **Status Realizacji (jeśli dotyczy):** Filtruj np. tylko `Zakończone` lub `Anulowane` realizacje.
+    *   **Źródło / Kanał (jeśli dotyczy):** Wybierz kanał, np. `Sklep Online`.
+
+3.  **Zastosuj Filtry:** Kliknij przycisk `Zastosuj`, `Filtruj` lub podobny. Lista logów zostanie odświeżona, pokazując tylko wpisy spełniające wybrane kryteria.
+
+    `[placeholder: screenshot - aktywne filtry w widoku logów (np. zakres dat i kod vouchera)]`
+
+4.  **Czyszczenie Filtrów:** Aby powrócić do pełnego widoku logów, użyj opcji `Wyczyść filtry` lub `Resetuj`.
+
+**Łączenie Filtrów:** Możesz aktywować wiele filtrów jednocześnie, aby uzyskać bardzo precyzyjne wyniki (np. pokaż realizacje vouchera `LATO2024` przez klienta `jan.kowalski@example.com` w ostatnim miesiącu).
+
+Filtrowanie jest podstawowym narzędziem do analizy danych historycznych i zrozumienia szczegółów wykorzystania Twoich voucherów.

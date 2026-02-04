@@ -1,0 +1,45 @@
+---
+title: "Zarządzanie Walutami"
+shortTitle: "Waluty"
+description: "Jak definiować i używać różnych walut dla voucherów kwotowych."
+publishedAt: "2025-04-19"
+order: 3
+status: "published"
+---
+
+## Znaczenie Wielowalutowości
+
+Jeśli Twoja firma działa w krajach używających różnych walut lub obsługuje klientów międzynarodowych, możliwość definiowania wartości voucherów kwotowych w odpowiednich walutach jest niezbędna. Vouchery procentowe działają uniwersalnie niezależnie od waluty transakcji.
+
+## Definiowanie Waluty Vouchera
+
+Podczas [tworzenia vouchera kwotowego](/dokumentacja/zarzadzanie-voucherami/tworzenie), system powinien pozwalać na wybór waluty, w której wyrażona jest jego wartość.
+
+*   **Pole Waluty:** W formularzu tworzenia vouchera kwotowego, oprócz pola `Wartość`, powinno znajdować się pole `Waluta` (lista rozwijana lub pole tekstowe).
+*   **Wybór Waluty:** Wybierz odpowiednią walutę z listy (np. PLN, EUR, USD, GBP).
+
+`[placeholder: screenshot - pole wyboru waluty w formularzu tworzenia vouchera kwotowego]`
+
+*   **Zapis:** Wartość vouchera (np. 50) zostanie zapisana wraz z wybraną walutą (np. EUR). Voucher będzie miał wartość "50 EUR".
+
+## Ustawienia Walutowe
+
+W globalnych [Ustawieniach Systemowych](/dokumentacja/ustawienia/konfiguracje-systemowe) mogą znajdować się opcje związane z walutami:
+
+*   **Domyślna Waluta:** Waluta, która będzie domyślnie wybierana podczas tworzenia nowych voucherów kwotowych.
+*   **Lista Dostępnych Walut:** Możliwość konfiguracji, które waluty mają być dostępne do wyboru w systemie.
+*   **Formatowanie Waluty:** Ustawienia dotyczące sposobu wyświetlania kwot (np. separator dziesiętny, separator tysięcy, symbol waluty, pozycja symbolu).
+
+`[placeholder: screenshot - sekcja ustawień walutowych w panelu administracyjnym]`
+
+## Realizacja Voucherów Wielowalutowych
+
+Sposób realizacji vouchera kwotowego w innej walucie niż waluta transakcji zależy od integracji z systemem sprzedaży (np. e-commerce, POS):
+
+*   **Brak Konwersji:** Najprostszy scenariusz - voucher może być zrealizowany tylko w transakcjach przeprowadzanych w tej samej walucie, w której został wystawiony (np. voucher 50 EUR tylko przy płatności w EUR).
+*   **Automatyczna Konwersja (jeśli zaimplementowana):** System sprzedaży, w momencie walidacji vouchera przez Vouchie API, może otrzymać informację o jego wartości i walucie, a następnie przeliczyć tę wartość na walutę transakcji po aktualnym kursie (kurs może pochodzić z systemu sprzedaży lub być dostarczany przez Vouchie, jeśli oferuje taką funkcję).
+    *   *Przykład:* Klient płaci w PLN, używa vouchera na 10 EUR. System sprzedaży sprawdza w Vouchie, że voucher jest na 10 EUR, pobiera aktualny kurs EUR/PLN (np. 4.30) i stosuje zniżkę 43 PLN.
+
+**Ważne:** Zrozumienie, jak system obsługuje konwersję walut (czy w ogóle ją obsługuje i kto dostarcza kursy wymiany), jest kluczowe przy oferowaniu voucherów kwotowych klientom międzynarodowym.
+
+Obsługa wielu walut pozwala na tworzenie bardziej precyzyjnych ofert dla klientów na różnych rynkach i upraszcza zarządzanie promocjami w środowisku globalnym.

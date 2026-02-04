@@ -1,0 +1,90 @@
+---
+title: "Dokumentacja API"
+shortTitle: "Dokumentacja API"
+description: "Szczegółowa specyfikacja API REST Vouchie dla deweloperów."
+publishedAt: "2025-04-19"
+order: 2
+status: "published"
+---
+
+## Wprowadzenie do API Vouchie
+
+API Vouchie (Application Programming Interface) to zestaw reguł i protokołów, które pozwalają Twoim aplikacjom na interakcję z systemem Vouchie w sposób programistyczny. Dzięki API możesz zautomatyzować zadania związane z voucherami, takie jak:
+
+*   Generowanie nowych voucherów (np. w odpowiedzi na rejestrację klienta w Twoim sklepie).
+*   Walidacja kodu vouchera przed zastosowaniem go w koszyku zakupowym.
+*   Oznaczanie vouchera jako zrealizowany po zakończeniu transakcji.
+*   Pobieranie listy voucherów przypisanych do klienta.
+*   Pobieranie szczegółów konkretnego vouchera.
+
+## Dostęp do Pełnej Dokumentacji API (Swagger/OpenAPI)
+
+**Pełna, interaktywna dokumentacja API Vouchie, zawierająca szczegółowe opisy wszystkich dostępnych endpointów, parametrów żądań, formatów odpowiedzi oraz przykłady kodu, znajduje się pod adresem:**
+
+`[placeholder: Link do dokumentacji Swagger/OpenAPI Vouchie API]`
+
+*(Zazwyczaj jest to dedykowana strona, np. `https://api.twojadomena.com/docs`)*
+
+Dokumentacja ta jest najczęściej generowana w standardzie OpenAPI (dawniej Swagger), co pozwala na łatwe testowanie żądań bezpośrednio z poziomu przeglądarki oraz automatyczne generowanie kodu klienckiego dla różnych języków programowania.
+
+## Kluczowe Koncepcje API
+
+*   **Endpointy:** Adresy URL, pod które wysyłasz żądania (np. `/vouchers`, `/vouchers/{voucher_id}/redeem`).
+*   **Metody HTTP:** Rodzaj operacji, którą chcesz wykonać:
+    *   `GET`: Pobieranie danych (np. lista voucherów, szczegóły vouchera).
+    *   `POST`: Tworzenie nowych zasobów (np. nowy voucher, nowa realizacja).
+    *   `PUT` / `PATCH`: Aktualizacja istniejących zasobów (np. edycja vouchera).
+    *   `DELETE`: Usuwanie zasobów (np. usunięcie vouchera).
+*   **Uwierzytelnianie:** Każde żądanie do API musi być uwierzytelnione. Zazwyczaj odbywa się to poprzez przesłanie [Klucza API](/dokumentacja/api-integracje/zarzadzanie-kluczami) w nagłówku żądania (np. `Authorization: Bearer YOUR_API_KEY` lub `X-Api-Key: YOUR_API_KEY`). Szczegóły znajdziesz w dokumentacji API.
+*   **Format Danych:** Żądania (body) i odpowiedzi są zazwyczaj przesyłane w formacie JSON (JavaScript Object Notation).
+*   **Kody Odpowiedzi HTTP:** Standardowe kody informujące o wyniku żądania:
+    *   `200 OK`: Żądanie zakończone sukcesem.
+    *   `201 Created`: Zasób został pomyślnie utworzony.
+    *   `204 No Content`: Zasób został pomyślnie usunięty/zaktualizowany (bez zwracania treści).
+    *   `400 Bad Request`: Błędne żądanie (np. brakujące parametry).
+    *   `401 Unauthorized`: Błąd uwierzytelnienia (nieprawidłowy lub brakujący klucz API).
+    *   `403 Forbidden`: Brak uprawnień do wykonania operacji.
+    *   `404 Not Found`: Nie znaleziono zasobu (np. vouchera o podanym ID).
+    *   `422 Unprocessable Entity`: Błąd walidacji danych (np. próba realizacji wygasłego vouchera).
+    *   `500 Internal Server Error`: Błąd po stronie serwera Vouchie.
+
+## Przykładowe Użycie (Pseudokod)
+
+**1. Walidacja i Realizacja Vouchera w Sklepie Online:**
+
+```
+// Klient wpisuje kod vouchera w koszyku: "LATO20"
+
+// 1. Twój backend wysyła żądanie do Vouchie API, aby sprawdzić kod
+response = HTTP_GET("/vouchers/validate/LATO20",
+                  headers={"Authorization": "Bearer YOUR_API_KEY"})
+
+// 2. Analiza odpowiedzi
+if response.status == 200:
+    // Voucher jest ważny, pobierz szczegóły (np. wartość zniżki)
+    discount_value = response.json["value"]
+    voucher_id = response.json["id"]
+    // Zastosuj zniżkę w koszyku
+    apply_discount_to_cart(discount_value)
+    // Zapisz voucher_id w sesji zamówienia
+else if response.status == 404:
+    // Kod nie istnieje lub jest nieaktywny
+    show_error_message("Nieprawidłowy kod vouchera.")
+else if response.status == 422:
+    // Błąd walidacji (np. przekroczono limit użyć, voucher wygasł)
+    show_error_message(response.json["error_message"])
+
+// ... Klient składa zamówienie ...
+
+// 3. Po pomyślnym złożeniu zamówienia, oznacz voucher jako zrealizowany
+redeem_response = HTTP_POST("/vouchers/{voucher_id}/redeem",
+                         headers={"Authorization": "Bearer YOUR_API_KEY"},
+                         body={"transaction_id": "ORDER_12345"})
+
+if redeem_response.status == 200:
+    // Realizacja zarejestrowana pomyślnie
+else:
+    // Obsłuż błąd realizacji (np. logowanie, powiadomienie admina)
+```
+
+**Zawsze odwołuj się do pełnej dokumentacji API (Swagger/OpenAPI), aby uzyskać dokładne definicje endpointów, parametrów i odpowiedzi.**

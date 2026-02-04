@@ -1,0 +1,47 @@
+---
+title: "Eksport Logów Wykorzystania"
+shortTitle: "Eksport"
+description: "Jak wyeksportować dane z logów wykorzystania do pliku CSV lub innego formatu."
+publishedAt: "2025-04-19"
+order: 4
+status: "published"
+---
+
+## Dlaczego Eksportować Logi?
+
+Chociaż Vouchie oferuje narzędzia do przeglądania i filtrowania logów, czasami potrzebujesz przeprowadzić bardziej zaawansowaną analizę lub połączyć dane z innymi systemami. Eksport logów do pliku (najczęściej CSV) umożliwia:
+
+*   Analizę w arkuszach kalkulacyjnych (Excel, Google Sheets).
+*   Import danych do narzędzi BI (Business Intelligence) jak Tableau czy Power BI.
+*   Tworzenie niestandardowych raportów i wizualizacji.
+*   Archiwizację danych poza systemem Vouchie.
+*   Udostępnianie danych innym działom firmy (np. marketingowi, finansom).
+
+## Jak Eksportować Logi?
+
+Proces eksportu zazwyczaj wygląda następująco:
+
+1.  **Nawigacja:** Przejdź do widoku [Logów Wykorzystania](/dokumentacja/logi-wykorzystania/przegladanie).
+2.  **Filtrowanie (Zalecane):** Zastosuj [filtry](/dokumentacja/logi-wykorzystania/filtrowanie), aby wybrać dokładnie ten zestaw danych, który chcesz wyeksportować (np. logi z ostatniego kwartału dla konkretnej kampanii). Eksportowanie wszystkich logów może być nieefektywne przy dużej ilości danych.
+
+    `[placeholder: screenshot - widok logów z aktywnymi filtrami przed eksportem]`
+
+3.  **Znajdź Opcję Eksportu:** Poszukaj przycisku `Eksportuj`, `Pobierz CSV` lub ikony eksportu (często strzałka w dół).
+
+    `[placeholder: screenshot - przycisk/ikona eksportu]`
+
+4.  **Wybierz Format (jeśli dotyczy):** Najczęściej dostępnym formatem jest CSV (Comma Separated Values), który jest kompatybilny z większością narzędzi analitycznych. Czasami dostępne mogą być inne formaty (np. Excel - XLSX).
+5.  **Potwierdź Eksport:** Kliknij przycisk eksportu. System rozpocznie generowanie pliku.
+6.  **Pobierz Plik:** Po zakończeniu generowania, plik zostanie automatycznie pobrany przez przeglądarkę lub pojawi się link do jego pobrania.
+
+## Struktura Pliku CSV
+
+Wyeksportowany plik CSV będzie zawierał dane z logów, gdzie:
+
+*   Pierwszy wiersz to zazwyczaj nagłówki kolumn (np. `Data`, `Kod Vouchera`, `Email Klienta`, `Wartość Zniżki`).
+*   Każdy kolejny wiersz odpowiada jednemu wpisowi w logach (jednej realizacji).
+*   Dane w wierszu są oddzielone separatorem (najczęściej przecinkiem `,` lub średnikiem `;`).
+
+Możesz otworzyć ten plik w dowolnym edytorze tekstu lub arkuszu kalkulacyjnym, aby rozpocząć analizę.
+
+**Uwaga:** Upewnij się, że masz odpowiednie uprawnienia w systemie Vouchie, aby móc eksportować dane.

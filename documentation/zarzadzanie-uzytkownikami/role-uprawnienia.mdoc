@@ -1,0 +1,78 @@
+---
+title: "Role i Uprawnienia Użytkowników"
+shortTitle: "Role i Uprawnienia"
+description: "Jak definiować role i przypisywać uprawnienia, kontrolując dostęp do funkcji systemu."
+publishedAt: "2025-04-19"
+order: 3
+status: "published"
+---
+
+## Czym Są Role i Uprawnienia?
+
+System ról i uprawnień (RBAC - Role-Based Access Control) pozwala na precyzyjne zarządzanie tym, co poszczególni użytkownicy mogą robić w panelu Vouchie. Zamiast nadawać uprawnienia indywidualnie każdemu użytkownikowi, tworzysz **Role** (np. Administrator, Menedżer Marketingu, Pracownik Wsparcia), a następnie przypisujesz konkretne **Uprawnienia** (np. `tworzenie voucherów`, `przeglądanie logów`, `zarządzanie użytkownikami`) do tych ról.
+
+**Korzyści:**
+
+*   **Bezpieczeństwo:** Użytkownicy mają dostęp tylko do tych funkcji, które są im niezbędne do pracy (zasada najmniejszych uprawnień).
+*   **Organizacja:** Łatwiejsze zarządzanie dostępem dla grup użytkowników o podobnych obowiązkach.
+*   **Skalowalność:** Proste nadawanie uprawnień nowym członkom zespołu poprzez przypisanie im odpowiedniej roli.
+
+## Domyślne Role
+
+Vouchie zazwyczaj dostarcza zestaw predefiniowanych ról z typowymi uprawnieniami:
+
+*   **Administrator:** Pełny dostęp do wszystkich funkcji systemu, w tym zarządzania użytkownikami, ustawieniami i subskrypcją.
+*   **Menedżer (Manager):** Szerokie uprawnienia do zarządzania voucherami, szablonami, klientami, kampaniami, ale zazwyczaj bez możliwości zarządzania innymi użytkownikami czy krytycznymi ustawieniami systemu.
+*   **Wsparcie (Support):** Ograniczony dostęp, często do przeglądania danych, logów, ewentualnie edycji niektórych elementów w celu pomocy klientom lub menedżerom.
+*   **Tylko do odczytu (Read-Only):** Dostęp wyłącznie do przeglądania danych, bez możliwości wprowadzania zmian.
+
+*Uwaga: Nazwy i zakres uprawnień domyślnych ról mogą się różnić.*
+
+## Zarządzanie Rolami (jeśli dostępne)
+
+Bardziej zaawansowane systemy pozwalają na tworzenie niestandardowych ról i edycję uprawnień istniejących.
+
+1.  **Nawigacja:** Przejdź do sekcji `Administracja -> Role i Uprawnienia` lub podobnej.
+2.  **Lista Ról:** Zobaczysz listę dostępnych ról.
+
+    `[placeholder: screenshot - lista ról w systemie]`
+
+3.  **Tworzenie Nowej Roli:**
+    *   Kliknij `+ Dodaj Rolę`.
+    *   Nadaj nazwę roli (np. "Analityk Marketingu").
+    *   Przejdź przez listę dostępnych uprawnień i zaznacz te, które mają być przypisane do tej roli.
+
+    `[placeholder: screenshot - formularz tworzenia nowej roli z listą uprawnień]`
+
+4.  **Edycja Istniejącej Roli:**
+    *   Kliknij nazwę roli lub ikonę edycji.
+    *   Zmodyfikuj listę zaznaczonych uprawnień.
+    *   Zapisz zmiany.
+
+    **Uwaga:** Zmiana uprawnień roli wpłynie na wszystkich użytkowników, którym ta rola jest przypisana.
+
+5.  **Usuwanie Roli:**
+    *   Możesz usunąć tylko niestandardowe role (domyślnych zazwyczaj nie da się usunąć).
+    *   Przed usunięciem roli upewnij się, że żaden użytkownik nie ma jej przypisanej (system może wymagać zmiany roli tych użytkowników).
+
+## Lista Dostępnych Uprawnień
+
+Lista konkretnych uprawnień, które można przypisać do ról, zależy od funkcjonalności systemu Vouchie. Przykładowe uprawnienia mogą obejmować:
+
+*   `vouchers:create` (Tworzenie voucherów)
+*   `vouchers:read` (Przeglądanie voucherów)
+*   `vouchers:update` (Edycja voucherów)
+*   `vouchers:delete` (Usuwanie voucherów)
+*   `templates:manage` (Zarządzanie szablonami)
+*   `clients:manage` (Zarządzanie klientami)
+*   `logs:read` (Przeglądanie logów)
+*   `logs:export` (Eksport logów)
+*   `users:manage` (Zarządzanie użytkownikami systemu)
+*   `roles:manage` (Zarządzanie rolami i uprawnieniami)
+*   `settings:manage` (Zarządzanie ustawieniami systemowymi)
+*   `billing:manage` (Zarządzanie subskrypcją i płatnościami)
+*   `reports:read` (Dostęp do statystyk i raportów)
+
+Dokładna lista i granulacja uprawnień powinna być dostępna w sekcji zarządzania rolami.
+
+Starannie skonfigurowane role i uprawnienia są podstawą bezpiecznego i efektywnego korzystania z Vouchie przez cały zespół.

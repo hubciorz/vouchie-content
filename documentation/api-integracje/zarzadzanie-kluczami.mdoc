@@ -1,0 +1,71 @@
+---
+title: "Zarządzanie Kluczami API"
+shortTitle: "Zarządzanie Kluczami"
+description: "Jak generować, zarządzać i odwoływać klucze dostępowe API."
+publishedAt: "2025-04-19"
+order: 3
+status: "published"
+---
+
+## Czym Są Klucze API?
+
+Klucze API (API Keys) to unikalne, tajne ciągi znaków, które służą do uwierzytelniania Twoich aplikacji podczas komunikacji z [API Vouchie](/dokumentacja/api-integracje/dokumentacja-api). Działają jak hasło, potwierdzając, że żądanie pochodzi z zaufanego źródła (Twojej aplikacji) i identyfikując Twoje konto.
+
+**Traktuj klucze API jak dane poufne:**
+
+*   Nigdy nie umieszczaj ich bezpośrednio w kodzie front-endowym (np. w JavaScript w przeglądarce).
+*   Przechowuj je bezpiecznie po stronie serwera (backendu) Twojej aplikacji, np. w zmiennych środowiskowych lub systemach zarządzania sekretami.
+*   Nie udostępniaj ich publicznie (np. w repozytoriach kodu).
+
+## Dostęp do Zarządzania Kluczami API
+
+Opcje zarządzania kluczami API znajdziesz zazwyczaj w sekcji:
+
+*   `Ustawienia -> API`
+*   `Ustawienia -> Integracje -> Klucze API`
+*   `Konto Dewelopera` (jeśli istnieje oddzielna sekcja dla deweloperów)
+
+*Dokładna lokalizacja może się różnić. Zarządzanie kluczami API jest często powiązane z [Ustawieniami Integracji](/dokumentacja/ustawienia/integracje-api).*
+
+## Generowanie Nowego Klucza API
+
+Gdy potrzebujesz połączyć nową aplikację lub usługę z Vouchie API, musisz wygenerować dla niej dedykowany klucz.
+
+1.  **Znajdź opcję generowania:** Poszukaj przycisku `+ Generuj Klucz API`, `+ Dodaj Klucz` lub podobnego.
+2.  **Nadaj nazwę:** Wpisz opisową nazwę dla klucza, która pomoże Ci zidentyfikować, która aplikacja go używa (np. "Sklep E-commerce - Produkcja", "System CRM - Integracja").
+3.  **Wygeneruj:** Kliknij przycisk generowania.
+4.  **Skopiuj i Zapisz Klucz:** System wyświetli nowo wygenerowany klucz API. **Jest to jedyny moment, kiedy będziesz mógł zobaczyć pełny klucz.** Skopiuj go natychmiast i zapisz w bezpiecznym miejscu (np. menedżerze haseł, bezpiecznym notatniku) przed zamknięciem okna.
+
+    `[placeholder: screenshot - okno z nowo wygenerowanym kluczem API i przyciskiem do kopiowania]`
+
+Zaleca się generowanie osobnych kluczy API dla każdej zintegrowanej aplikacji. Ułatwia to zarządzanie i unieważnianie dostępu w razie potrzeby.
+
+## Przeglądanie Istniejących Kluczy
+
+W sekcji zarządzania kluczami zobaczysz listę wszystkich wygenerowanych kluczy API dla Twojego konta.
+
+**Typowe informacje na liście:**
+
+*   **Nazwa Klucza:** Nazwa nadana podczas generowania.
+*   **Fragment Klucza:** Często wyświetlane są tylko pierwsze lub ostatnie znaki klucza, aby ułatwić identyfikację, ale nie ujawniać całego sekretu.
+*   **Data Utworzenia:** Kiedy klucz został wygenerowany.
+*   **Status:** Aktywny / Unieważniony.
+*   **Akcje:** Opcje zarządzania kluczem.
+
+`[placeholder: screenshot - lista wygenerowanych kluczy API]`
+
+## Unieważnianie (Revoke) Klucza API
+
+Jeśli podejrzewasz, że klucz API został skompromitowany (np. przypadkowo ujawniony) lub jeśli aplikacja używająca danego klucza nie jest już potrzebna, powinieneś go natychmiast unieważnić.
+
+1.  **Znajdź klucz:** Zlokalizuj klucz na liście.
+2.  **Wybierz akcję:** Kliknij przycisk `Unieważnij`, `Revoke`, `Usuń` lub ikonę kosza (`🗑️`) przy danym kluczu.
+3.  **Potwierdź:** System poprosi o potwierdzenie, informując, że operacja jest nieodwracalna i aplikacje używające tego klucza stracą dostęp do API.
+
+    `[placeholder: screenshot - okno potwierdzenia unieważnienia klucza API]`
+
+4.  Potwierdź operację.
+
+Status klucza zmieni się na `Unieważniony` lub klucz zniknie z listy aktywnych kluczy. Żadne żądanie uwierzytelnione tym kluczem nie będzie już akceptowane przez API Vouchie.
+
+Prawidłowe zarządzanie kluczami API jest kluczowe dla bezpieczeństwa Twoich danych i integracji.

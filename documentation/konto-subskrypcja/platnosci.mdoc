@@ -1,0 +1,53 @@
+---
+title: "Płatności i Faktury"
+shortTitle: "Płatności"
+description: "Jak zarządzać metodami płatności i danymi do faktur w systemie Vouchie."
+publishedAt: "2025-04-19"
+order: 3
+status: "published"
+---
+
+## Zarządzanie Metodami Płatności
+
+Aby zapewnić ciągłość opłacania subskrypcji Vouchie, ważne jest utrzymywanie aktualnej metody płatności. Systemy SaaS zazwyczaj obsługują płatności kartami kredytowymi/debetowymi.
+
+**Jak zarządzać metodami płatności:**
+
+1.  **Nawigacja:** Przejdź do sekcji `Konto -> Rozliczenia`, `Subskrypcja -> Płatności` lub podobnej.
+2.  **Aktualna Metoda Płatności:** Zobaczysz informacje o aktualnie zapisanej karcie (zazwyczaj tylko jej typ, ostatnie 4 cyfry i data ważności).
+
+    `[placeholder: screenshot - widok aktualnej metody płatności]`
+
+3.  **Aktualizacja/Zmiana Karty:**
+    *   Poszukaj przycisku `Aktualizuj Kartę`, `Zmień Metodę Płatności` lub `Dodaj Kartę`.
+    *   Kliknięcie zazwyczaj przekieruje Cię do bezpiecznego formularza dostawcy płatności (np. Stripe, Braintree, Paddle), gdzie możesz wprowadzić dane nowej karty.
+    *   Wprowadź numer karty, datę ważności i kod CVC/CVV.
+    *   Zapisz zmiany.
+
+    `[placeholder: screenshot - bezpieczny formularz dodawania/aktualizacji karty płatniczej]`
+
+4.  **Usuwanie Karty:** Jeśli chcesz usunąć zapisaną kartę (np. przed anulowaniem subskrypcji), poszukaj opcji `Usuń Kartę` (może być dostępna tylko jeśli dodana jest więcej niż jedna metoda płatności lub jeśli subskrypcja jest już anulowana).
+
+**Ważne:**
+*   Upewnij się, że Twoja karta ma wystarczające środki i nie wygasła, aby uniknąć problemów z płatnościami i potencjalnego zawieszenia konta.
+*   Vouchie (ani jego dostawca płatności) zazwyczaj **nie przechowuje pełnych danych Twojej karty** – są one bezpiecznie tokenizowane przez certyfikowanego operatora płatności.
+
+## Zarządzanie Danymi do Faktury
+
+Poprawne dane do faktury są niezbędne do prawidłowego rozliczania i księgowania opłat za subskrypcję.
+
+**Jak zarządzać danymi do faktury:**
+
+1.  **Nawigacja:** W sekcji `Konto -> Rozliczenia` lub `Subskrypcja -> Dane Firmy/Faktury`.
+2.  **Aktualne Dane:** Sprawdź zapisane informacje (Nazwa firmy, Adres, NIP/VAT ID).
+3.  **Edycja Danych:**
+    *   Kliknij `Edytuj Dane`, `Aktualizuj Informacje` lub podobny przycisk.
+    *   Wprowadź lub popraw dane firmy, które mają pojawiać się na fakturach.
+
+    `[placeholder: screenshot - formularz edycji danych do faktury]`
+
+4.  **Zapisz Zmiany:** Zapisz zaktualizowane informacje.
+
+Te dane będą używane do generowania wszystkich przyszłych [faktur](/dokumentacja/konto-subskrypcja/historia-rozliczen).
+
+Utrzymywanie aktualnych informacji płatniczych i danych do faktury jest kluczowe dla bezproblemowego korzystania z płatnych planów Vouchie.

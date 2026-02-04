@@ -1,0 +1,46 @@
+---
+title: "Tworzenie Vouchera"
+shortTitle: "Tworzenie"
+description: "Krok po kroku: jak stworzyć nowy voucher kwotowy lub procentowy."
+publishedAt: "2025-04-19"
+order: 2
+status: "published"
+---
+
+## Jak Stworzyć Nowy Voucher?
+
+Proces tworzenia nowego vouchera w Vouchie jest zaprojektowany tak, aby był szybki i elastyczny. Postępuj zgodnie z poniższymi krokami:
+
+1.  **Nawigacja:** W panelu administracyjnym przejdź do sekcji `Vouchery`, zazwyczaj dostępnej w głównym menu nawigacyjnym.
+2.  **Inicjacja:** Kliknij przycisk `+ Dodaj Voucher` lub o podobnym znaczeniu, aby otworzyć formularz tworzenia.
+
+    `[placeholder: screenshot - przycisk dodawania vouchera na liście]`
+
+3.  **Wypełnianie Formularza:** Uzupełnij wymagane pola, definiując kluczowe parametry vouchera:
+
+    *   **Typ Vouchera:**
+        *   `Kwotowy`: Określa stałą kwotę zniżki (np. 50 PLN).
+        *   `Procentowy`: Określa zniżkę jako procent wartości zamówienia (np. 15%).
+    *   **Wartość:** Wprowadź wartość liczbową zniżki (np. `50` dla kwotowego lub `15` dla procentowego).
+    *   **Kod Vouchera:**
+        *   `Generuj automatycznie`: Zaznacz, aby system stworzył unikalny, losowy ciąg znaków (zalecane dla unikalności).
+        *   `Wprowadź ręcznie`: Odznacz i wpisz własny kod (np. `LATO2024`). Pamiętaj o zapewnieniu unikalności, jeśli tworzysz wiele voucherów.
+    *   **Liczba Użyć:** Zdecyduj, ile razy voucher może zostać zrealizowany:
+        *   `Pojedyncze`: Tylko jedno użycie przez dowolnego klienta.
+        *   `Wielokrotne`: Wpisz maksymalną dozwoloną liczbę użyć (np. `100`).
+        *   `Nieograniczone`: Brak limitu ilościowego (ograniczeniem pozostaje data ważności).
+    *   **Data Ważności:**
+        *   `Konkretna data`: Wybierz z kalendarza dzień, w którym voucher wygasa (np. 31.12.2024).
+        *   `Okres od utworzenia` (jeśli dostępne): Ustaw liczbę dni/miesięcy ważności od momentu wygenerowania vouchera.
+    *   **Przypisz do Klienta (Opcjonalne):**
+        *   Rozpocznij wpisywanie nazwy lub emaila klienta i wybierz go z listy.
+        *   Jeśli pozostanie puste, voucher będzie mógł być użyty przez każdego.
+    *   **Częściowa Realizacja (Tylko vouchery kwotowe):**
+        *   `Włącz`: Zezwala na wykorzystanie vouchera w kilku transakcjach, aż do wyczerpania jego wartości. Np. voucher 100 PLN użyty na zakup za 40 PLN pozostawi 60 PLN do wykorzystania.
+        *   `Wyłącz`: Voucher musi być wykorzystany w całości podczas jednej transakcji.
+
+    `[placeholder: screenshot - wypełniony formularz tworzenia vouchera]`
+
+4.  **Zapis:** Kliknij przycisk `Zapisz`, `Utwórz Voucher` lub podobny, aby zakończyć proces.
+
+Nowo utworzony voucher pojawi się na [Liście Voucherów](/dokumentacja/zarzadzanie-voucherami/lista-filtrowanie), gotowy do dystrybucji lub dalszej edycji.
